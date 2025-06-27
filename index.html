@@ -8,9 +8,9 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
       text-align: center;
       padding: 40px 20px;
     }
@@ -18,53 +18,59 @@
     h1 {
       font-size: 3rem;
       color: #00ffff;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       text-shadow: 0 0 10px #00ffff;
     }
 
-    p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      max-width: 700px;
-      margin: auto;
-      margin-bottom: 30px;
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      background: #00bcd4;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #008c9e;
+      transform: scale(1.05);
     }
 
     .section {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .image-container {
+      margin: 20px auto;
+    }
+
+    img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
     }
 
     ul {
       list-style: none;
       padding: 0;
+      font-size: 1.1rem;
     }
 
     li {
       margin: 10px 0;
-      font-size: 1.05rem;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 1rem;
-      background: #00bcd4;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .button:hover {
-      background: #0097a7;
-      transform: scale(1.05);
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #ccc;
     }
   </style>
 </head>
@@ -72,37 +78,53 @@
 
   <h1>Skyfall SMP</h1>
 
+  <!-- Description Section -->
   <div class="section">
-    <p>
-      Welcome to <strong>Skyfall SMP</strong> — a Minecraft survival server filled with epic battles, custom events, economy systems, and an awesome community. Whether you're a builder, PvP god, or peaceful adventurer, there's a place for you here.
+    <h2>🌍 About the Server</h2>
+    <p id="desc-short">
+      Welcome to Skyfall SMP — where the sky isn't the limit.
     </p>
+    <p id="desc-full" class="hidden">
+      Skyfall SMP is a Minecraft survival server with intense wars, custom events, economy features, and active community. From peaceful builders to PvP warriors — everyone has a place. We host weekly events and massive team fights. Are you ready to join the legends?
+    </p>
+    <a href="#" class="button" onclick="toggleDesc(); return false;">Read More</a>
   </div>
 
+  <!-- Image or GIF -->
+  <div class="section image-container">
+    <img src="https://media.tenor.com/4EJKq7xmyY0AAAAC/minecraft-smp.gif" alt="Skyfall SMP gif">
+  </div>
+
+  <!-- Rules Section -->
   <div class="section">
-    <h2>📜 Server Rules</h2>
+    <h2>📜 Rules</h2>
     <ul>
-      <li>❌ No griefing or stealing</li>
-      <li>⚔️ No hacks, cheats, or unfair mods</li>
-      <li>💬 Be respectful to all players</li>
-      <li>🌍 English in public chat only</li>
-      <li>✅ Follow staff instructions</li>
+      <li>✅ No griefing or stealing</li>
+      <li>❌ No hacking or exploiting</li>
+      <li>💬 Respect all players and staff</li>
+      <li>🌐 English only in public chat</li>
+      <li>⚠️ No toxic behavior</li>
     </ul>
   </div>
 
+  <!-- Discord + Vote -->
   <div class="section">
-    <h2>💬 Join Our Discord</h2>
-    <a href="https://discord.gg/YOUR-DISCORD-HERE" class="button" target="_blank">Join Discord</a>
-  </div>
-
-  <div class="section">
-    <h2>🗳️ Vote for Skyfall SMP</h2>
-    <a href="https://minecraft-server-vote-link.com" class="button" target="_blank">Vote Now</a>
+    <a class="button" href="https://discord.gg/YOUR-DISCORD-HERE" target="_blank">Join Our Discord</a>
+    <a class="button" href="https://minecraft-server-vote-link.com" target="_blank">Vote for Skyfall</a>
   </div>
 
   <footer>
-    &copy; 2025 Skyfall SMP. All rights reserved.
+    &copy; 2025 Skyfall SMP. Crafted with ❤️ by Katenko & Ujan.
   </footer>
+
+  <script>
+    function toggleDesc() {
+      const short = document.getElementById('desc-short');
+      const full = document.getElementById('desc-full');
+      short.classList.toggle('hidden');
+      full.classList.toggle('hidden');
+    }
+  </script>
 
 </body>
 </html>
-
