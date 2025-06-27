@@ -1,0 +1,58 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katenko vs Gi-hun</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .btn-container {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: crimson;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>Katenko vs Gi-hun</h1>
+  <p>Who do you think would win the ultimate showdown?</p>
+
+  <div class="btn-container">
+    <button onclick="alert('You voted for Katenko! ⚔️')">Vote Katenko</button>
+    <button onclick="alert('You voted for Gi-hun! 🟥')">Vote Gi-hun</button>
+  </div>
+</body>
+</html>
